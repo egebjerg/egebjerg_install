@@ -1,0 +1,2 @@
+#cp -r /home/elev_skel/ /home/elev
+rsync -a --force --delete /home/elev_skel/ /home/elev/
