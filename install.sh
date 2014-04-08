@@ -11,3 +11,6 @@ cp -b lightdm.conf /etc/lightdm/lightdm.conf
 
 cp -r website/ /home/egeadmin
 ln -s website/index.html /home/elev_skel/Skrivebord/intro.html
+
+cp templates/* /home/elev_skel/Skrivebord/
+cp templates/* /home/elev_skel/Skabeloner/
