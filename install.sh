@@ -9,6 +9,5 @@ cp -b lightdm.conf /etc/lightdm/lightdm.conf
 
 ./create_users.sh
 
-
-
-
+cp -r website/ /home/egeadmin
+ln -s website/index.html /home/elev_skel/Skrivebord/intro.html
