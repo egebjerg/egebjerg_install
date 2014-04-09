@@ -4,16 +4,18 @@ TO_REMOVE="abiword gnumeric apport update-manager update-manager-core"
 sudo apt-get -y install $PKGS
 sudo apt-get -y remove $TO_REMOVE
 
-#cp autostart /etc/skel/.config/lxsession/Lubuntu/
-cp -r /home/elev/* home/elev_skel/
-cp autostart /home/elev_skel/.config/lxsession/Lubuntu/
-cp autostart /home/elev/.config/lxsession/Lubuntu/
+mkdir -p /etc/skel/.config/lxsession/Lubuntu/
+mkdir -p /etc/skel/Skrivebord
+mkdir -p /etc/skel/Skabeloner
+cp autostart /etc/skel/.config/lxsession/Lubuntu/
+#cp -r /home/elev/* home/elev_skel/
+#cp autostart /home/elev_skel/.config/lxsession/Lubuntu/
+#cp autostart /home/elev/.config/lxsession/Lubuntu/
 cp -b lightdm.conf /etc/lightdm/lightdm.conf
 
-#./create_users.sh
-
 cp -r website/ /home/egeadmin
-ln -s /home/egeadmin/website/index.html /home/elev_skel/Skrivebord/intro.html
+ln -s /home/egeadmin/website/index.html /etc/skel/Skrivebord/intro.html
 
-cp templates/* /home/elev_skel/Skrivebord/
-cp templates/* /home/elev_skel/Skabeloner/
+cp templates/* /etc/skel/Skrivebord/
+
+./create_users.sh
