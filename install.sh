@@ -4,7 +4,7 @@ TO_REMOVE="abiword gnumeric apport update-manager update-manager-core"
 sudo apt-get -y install $PKGS
 sudo apt-get -y remove $TO_REMOVE
 
-cp -r home/* /etc/skel/
+#cp -r home/* /etc/skel/
 
 mkdir -p /etc/skel/.config/lxsession/Lubuntu/
 mkdir -p /etc/skel/Skrivebord
