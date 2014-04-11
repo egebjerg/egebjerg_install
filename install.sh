@@ -8,9 +8,6 @@ mkdir -p /etc/skel/.config/lxsession/Lubuntu/
 mkdir -p /etc/skel/Skrivebord
 mkdir -p /etc/skel/Skabeloner
 cp autostart /etc/skel/.config/lxsession/Lubuntu/
-#cp -r /home/elev/* home/elev_skel/
-#cp autostart /home/elev_skel/.config/lxsession/Lubuntu/
-#cp autostart /home/elev/.config/lxsession/Lubuntu/
 cp -b lightdm.conf /etc/lightdm/lightdm.conf
 
 cp -r website/ /home/egeadmin
