@@ -5,10 +5,6 @@ sudo apt-get -y install $PKGS
 sudo apt-get -y remove $TO_REMOVE
 sudo apt-get -y dist-upgrade
 
-echo "Checking for upgrades"
-sudo do-release-upgrade -d
-
-#cp -r home/* /etc/skel/
 
 mkdir -p /etc/skel/.config/lxsession/Lubuntu/
 mkdir -p /etc/skel/Skrivebord
@@ -22,10 +18,13 @@ ln -s /home/egeadmin/website/index.html /etc/skel/Skrivebord/intro.html
 cp templates/* /etc/skel/Skrivebord/
 
 #Now that everything is in place, create the users. Remmeber to log in to elev_skel before elev
-#./create_users.sh
+./create_users.sh
 
 # Initialize git
 cd /home/egeadmin
 mkdir git
 cd git
 git init
+
+echo "Checking for upgrades"
+sudo do-release-upgrade -d
