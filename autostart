@@ -1,2 +1,4 @@
 #cp -r /home/elev_skel/ /home/elev
+rm -rf /home/elev/*
+rm -rf /home/elev/.*
 rsync -a --force --delete /home/elev_skel/ /home/elev/
