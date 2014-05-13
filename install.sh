@@ -1,9 +1,11 @@
 PKGS="gedit libreoffice chromium-browser gimp openshot scribus openssh-server vim git"
-TO_REMOVE="abiword gnumeric apport update-manager update-manager-core"
+TO_REMOVE="abiword gnumeric apport update-manager update-manager-core wajig"
 
 sudo apt-get -y install $PKGS
 sudo apt-get -y remove $TO_REMOVE
 sudo apt-get -y dist-upgrade
+
+echo "Checking for upgrades"
 sudo do-release-upgrade -d
 
 #cp -r home/* /etc/skel/
