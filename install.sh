@@ -27,4 +27,4 @@ cd git
 git init
 
 echo "Checking for upgrades"
-sudo do-release-upgrade -d
+sudo do-release-upgrade
