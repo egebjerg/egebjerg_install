@@ -5,5 +5,5 @@
 #./install.sh
 
 cd /home/egeadmin/git
-git pull "https://github.com/egebjerg/egebjerg_install"
+git pull https://github.com/egebjerg/egebjerg_install master
 sudo ./install.sh
